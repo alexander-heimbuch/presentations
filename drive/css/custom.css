@@ -1,0 +1,89 @@
+.reveal {
+        background-color: #f5f4f0;
+}
+
+.reveal ol li {
+    white-space: nowrap;
+}
+
+.reveal section img {
+    border: none;
+    margin: 15px 0px;
+    box-shadow: none;
+}
+
+.reveal section .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.reveal section .col {
+    margin: 0 15px;
+}
+
+.reveal section .col-3 {
+    width: 75%;
+}
+
+.reveal section .col-1 {
+    width: 25%;
+}
+
+.reveal section .col-2 {
+    width: 50%;
+}
+
+.reveal section.color-invert * {
+    color: #fff;
+    text-shadow: 0px 0px 4px #000;
+}
+
+.reveal .no-bullets {
+    list-style: none;
+    margin-left: 0;
+}
+
+.reveal .push-top-1x {
+    margin-top: 15px;
+}
+
+.reveal .push-top-2x {
+    margin-top: 30px;
+}
+
+.reveal section .text-green, .reveal section .text-green * {
+    color: #4cdb4c;
+}
+
+.reveal section .text-red, .reveal section .text-red * {
+    color: #cc2900;
+}
+
+.reveal .license {
+    position: fixed;
+    bottom: 45px;
+    left: 30px;
+}
+
+.reveal .license, .reveal .license * {
+    color: #ccc;
+    font-size: 0.7em;
+    opacity: 0.8;
+}
+
+.reveal .small-text {
+    font-size: 0.5em;
+}
+
+.reveal .medium-text {
+    font-size: 0.75em;
+}
+
+
+.reveal table td {
+    border-bottom: none;
+}
+
+.reveal .text-left {
+    text-align: left;
+}
