@@ -26,6 +26,7 @@ html, body {
 }
 
 .player {
+  width: 768px;
   transition: all 500ms;
 }
 
@@ -132,4 +133,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.responsive-info {
+  font-size: 0.5em !important;
 }

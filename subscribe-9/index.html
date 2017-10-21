@@ -37,7 +37,7 @@
         <section>
           <section>
             <h2>Podcasts im Browser</h2>
-            <h4><em>Warum überhaupt ein Webplayer?</em></h4>
+            <h4><em>Gretchenfrage</em></h4>
             <aside class="notes">
               <ul>
                 <li>Bevor wir auf den Player zu sprechen kommen würde ich gerne erstmal einen Schritt zurück treten und einen Blick auf die Nutzungsrealität von Podcasts werfen</li>
@@ -135,8 +135,8 @@
         <!-- ZUSTANDSMASCHINE -->
         <section>
           <section>
-            <h2>Zustandsmaschine</h2>
-            <h4><em>Architektur</em></h4>
+            <h2>Architektur</h2>
+            <h4><em>Zustandsmaschine</em></h4>
             <aside class="notes">
               <ul>
                 <li>Um eine robuste Plattform für den Player und auch die zukünftige Erweiterungen und logik abzubilden sehr viel Zeit in das Thema investiert</li>
@@ -145,8 +145,8 @@
               </ul>
             </aside>
           </section>
-          <section>
-            <div id="zustandsmaschine-tree" class="player"></div>
+          <section class="centered">
+            <div id="zustandsmaschine-tree" style="width: 500px;" class="player"></div>
             <div id="zustandsmaschine-state-tree" class="background"></div>
             <aside class="notes">
               <ul>
@@ -163,16 +163,16 @@
               <div class="box-centered" style="width: 30%">
                 <h3>Aktion</h3>
               </div>
-              <div class="box-centered" style="width: 10%">
+              <div class="box-centered fragment" data-fragment-index="3" style="width: 10%">
                 <h3>+</h3>
               </div>
-              <div class="box-centered" style="width: 30%">
+              <div class="box-centered fragment" data-fragment-index="1" style="width: 30%">
                 <h3>Zustand</h3>
               </div>
-              <div class="box-centered" style="width: 10%">
+              <div class="box-centered fragment" data-fragment-index="3" style="width: 10%">
                 <h3>=</h3>
               </div>
-              <div class="box-centered" style="width: 30%">
+              <div class="box-centered fragment" data-fragment-index="2" style="width: 30%">
                 <h3>Zustand*</h3>
               </div>
             </div>
@@ -188,10 +188,56 @@
             <script src="zustandsmaschine.js" type="module"></script>
           </section>
         </section>
+
+        <!-- Features -->
+        <section>
+          <section>
+            <h2>Features</h2>
+            <h4><em>Theming, Kapitel, Embedding & mehr</em></h4>
+          </section>
+
+          <!-- Responsivität -->
+          <section class="centered" id="slide-responsive">
+            <h4>Responsivität</h4>
+            <p id="player-responsive-info" class="responsive-info"></p>
+            <div id="player-responsive" class="player"></div>
+            <aside class="notes">
+              <ul>
+                <li>In Höhe als auch in Breite dynamisch</li>
+                <li>Maximale Breite: 768px</li>
+                <li>Minimale Breite: 250px</li>
+                <li>Minimale Höhe (mit allen komponenten): 230px</li>
+                <li>Maximale Höhe (ausgefahrene Tabs): 550px</li>
+              </ul>
+            </aside>
+            <script src="feature-responsive.js" type="module"></script>
+          </section>
+
+          <!-- Theming -->
+          <section class="centered" id="slide-theming">
+            <h4>Theming</h4>
+            <div id="player-theming" class="player"></div>
+            <aside class="notes">
+              <ul>
+                <li>Komplett dynamische theming konzept</li>
+                <li>Player berechnet die Farben während der Laufzeit</li>
+                <li>Gesamte theme wird auf basis einer farbe berechnet</li>
+                <li>Zusätzlich kann eine highlight farbe gesetzt werden</li>
+              </ul>
+            </aside>
+            <script src="feature-theming.js" type="module"></script>
+          </section>
+
+        </section>
+
 			</div>
 		</div>
 		<script>
-			Reveal.initialize();
+			Reveal.initialize({
+        history: true,
+        width: '100%',
+        height: '100%'
+      });
 		</script>
 	</body>
-</html>
+</html
