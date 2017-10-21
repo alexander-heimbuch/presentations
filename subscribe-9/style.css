@@ -1,0 +1,98 @@
+html, body {
+  background: #0B2540;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #f2875c;
+}
+
+.reveal h4 {
+  color: white;
+}
+
+.reveal p {
+  color: #2B8AC6;
+}
+
+.player {
+  transition: all 500ms;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.grid {
+  display: flex;
+}
+
+.box-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes animatedBackground {
+  0% {
+      background-position: bottom right
+  }
+  50% {
+      background-position: top left
+  }
+  100% {
+      background-position: bottom right
+  }
+}
+
+.reveal .slide-background {
+  opacity: 0.2 !important;
+  background-size: 110%;
+  animation-name: animatedBackground;
+  animation-duration: 150s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: animatedBackground;
+  -webkit-animation-duration: 150s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.reveal section img {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.player-konzept {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.player-konzept img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.player-konzept .beschreibung {
+  opacity: 0;
+  position: absolute;
+}
+
+.centered {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
