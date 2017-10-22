@@ -22,35 +22,27 @@ const dimensions = [{
   width: '250px'
 }]
 
-Reveal.addEventListener('slidechanged', (event) => {
-  let interval
-  if (event.currentSlide.id !== 'slide-responsive') {
-    clearInterval(interval)
-    return
-  }
+playerNode.style.width = dimensions[0].width
+infoNode.textContent = dimensions[0].size + ` (${dimensions[0].width})`
 
-  playerNode.style.width = dimensions[0].width
-  infoNode.textContent = dimensions[0].size + ` (${dimensions[0].width})`
+logbuchNetzpolitik.tabs = {
+  chapters: true
+}
 
-  logbuchNetzpolitik.tabs = {
-    chapters: true
-  }
+window.podlovePlayer(playerNode, logbuchNetzpolitik).then(store => {
+  let counter = 1
 
-  window.podlovePlayer(playerNode, logbuchNetzpolitik).then(store => {
-    let counter = 1
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 500)
 
-    setTimeout(() => window.dispatchEvent(new Event('resize')), 500)
+  setInterval(() => {
+    playerNode.style.width = dimensions[counter].width
+    infoNode.textContent = dimensions[counter].size + ` (${dimensions[counter].width})`
+    counter += 1
 
-    interval = setInterval(() => {
-      playerNode.style.width = dimensions[counter].width
-      infoNode.textContent = dimensions[counter].size + ` (${dimensions[counter].width})`
-      counter += 1
+    if (counter > dimensions.length - 1) {
+      counter = 0
+    }
 
-      if (counter > dimensions.length - 1) {
-        counter = 0
-      }
-
-      window.dispatchEvent(new Event('resize'))
-    }, 3000)
-  })
+    window.dispatchEvent(new Event('resize'))
+  }, 3000)
 })

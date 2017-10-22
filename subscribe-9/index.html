@@ -194,10 +194,17 @@
           <section>
             <h2>Features</h2>
             <h4><em>Theming, Kapitel, Embedding & mehr</em></h4>
+            <aside class="notes">
+              <ul>
+                <li>Nach der vielen Theorie freue ich mich euch jetzt die features des Players präsentieren zu können</li>
+                <li>Alle beispiele die ihr jetzt sehen werdet sind ohne anpassungen am eigentlichen Player code möglich</li>
+                <li>Die meisten von euch werden den Publisher für die Integration wahrscheinlich verwenden, wenn ihr allerdings den Player selber in eure Webseite integrieren und erweitern wollt lade ich euch herzlich zum passenden Workshop mrogen ein</li>
+              </ul>
+            </aside>
           </section>
 
           <!-- Responsivität -->
-          <section class="centered" id="slide-responsive">
+          <section class="centered" id="responsive">
             <h4>Responsivität</h4>
             <p id="player-responsive-info" class="responsive-info"></p>
             <div id="player-responsive" class="player"></div>
@@ -214,7 +221,7 @@
           </section>
 
           <!-- Theming -->
-          <section class="centered" id="slide-theming">
+          <section class="centered" id="theming">
             <h4>Theming</h4>
             <div id="player-theming" class="player"></div>
             <aside class="notes">
@@ -228,8 +235,135 @@
             <script src="feature-theming.js" type="module"></script>
           </section>
 
+          <!-- Dynamische Komponenten -->
+          <section class="centered" id="dynamic-components">
+            <h4>Dynamische Komponenten</h4>
+            <div id="player-components" class="player"></div>
+            <h5>Header</h5>
+            <div class="input-group">
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="poster">
+                <label>Poster</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="showTitle">
+                <label>Show</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="episodeTitle">
+                <label>Episode</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="subtitle">
+                <label>Subtitle</label>
+              </div>
+            </div>
+            <h5>Controls</h5>
+            <div class="input-group">
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="progressbar">
+                <label>Track</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="controlSteppers">
+                <label>Track Stepper</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="controlChapters">
+                <label>Chapter Stepper</label>
+              </div>
+            </div>
+            <h5>Tabs</h5>
+            <div class="input-group">
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="tabInfo">
+                <label>Info</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="tabChapters">
+                <label>Chapters</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="tabDownload">
+                <label>Download</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="tabShare">
+                <label>Share</label>
+              </div>
+              <div class="input">
+                <input type="checkbox" name="visbleComponent" data-visible-component="tabAudio">
+                <label>Audio</label>
+              </div>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Alle Komponenten des Players lassen sich programmatisch an und abschalten</li>
+                <li>Funktionalität wird intern auch verwendet um bestimmte Konzepte abzubilden</li>
+                <li>Bspw. Kapitel wenn kein vorhanden sind, Lautstärke slider auf mobilen Geräten, Tabs und controls bei live modus</li>
+              </ul>
+            </aside>
+            <script src="feature-components.js" type="module"></script>
+          </section>
+
+        <!-- Navigation -->
+
+        <!-- Sharing -->
+        <section class="centered" id="sharing">
+          <h4>Sharing</h4>
+          <div id="player-sharing" class="player"></div>
+          <aside class="notes">
+            <ul>
+              <li>Sharing können 4 verschiedene Referenzen geteilt werden:
+                <ul>
+                  <li>Show an sich, die direkt auf die Hauptseite des Podcasts verweist</li>
+                  <li>Episode, welche auf den start der Episode verweist</li>
+                  <li>Aktuelle Kapitel, welche auf den start des aktuellen Kapitels verweist</li>
+                  <li>Spielzeit, welche auf die aktuelle Zeit referenziert</li>
+                  <li>Zukünftig wird des auch noch die Möglichkeit geben ein Interval zu teilen</li>
+                </ul>
+              </li>
+              <li>Die Referenz kann in 6 verschiedene Kanäle direkt geteilt werden</li>
+              <li>Alternativ wird auch direkt darunter die Referenz zum kopieren angeboten</li>
+            </ul>
+          </aside>
+          <script src="feature-sharing.js" type="module"></script>
         </section>
 
+        <!-- Embedding -->
+        <section class="centered" id="embedding">
+          <h4>Embedding</h4>
+          <div id="player-embedding" class="player fragment" style="margin-bottom: 15px;"></div>
+          <iframe class="fragment" width="768" height="290" src="https://forschergeist.de/wp-content/plugins/podlove-podcasting-plugin-for-wordpress/lib/modules/podlove_web_player/player_v4/dist/share.html?episode=https://forschergeist.de/?podlove_player4=164" frameborder="0" scrolling="no"></iframe>
+
+          <aside class="notes">
+            <ul>
+              <li>Embedding ist ebenso lokalisiert unter sharing</li>
+              <li>Da embedding immer einer referenz auf eine episode darstellt ist es entsprechend nicht für die show verfügbar</li>
+              <li>Wir verwenden einen iframe zum embedden, das macht es relativ einfach die episdoe zu teilen bedeutet für uns aber auch technische Einschränkungen</li>
+              <li>So ist es nicht möglich die Höhe von iframes ohne externes javascript anzupassen</li>
+              <li>Das zwingt uns größen in eienr fixierten Ratio anzubieten, deshalb funktionieren die tabs anders als im nativen player</li>
+            </ul>
+          </aside>
+          <script src="feature-embedding.js" type="module"></script>
+        </section>
+
+         <!-- Multilingual -->
+         <section class="centered" id="multilingual">
+            <h4>Mehrsprachen Support</h4>
+            <div id="player-multilingual" class="player"></div>
+
+            <aside class="notes">
+              <ul>
+                <li>Von anfang an mit konzipiert, auch hier lokalisiert der player während der Laufzeit</li>
+                <li>Standardmäßig nimmt er die browser locale des nutzers an, das kann aber auch per Konfiguration veränder werden</li>
+                <li>Derzeit gibt es den Player auf Deutsch, Englisch sowie Spanisch</li>
+                <li>Lokalisierung ist relativ einfach, wir verwenden json files dazu, und wir sind über jede Zuarbeit immer dankbar, bspw. Spanisch wurde von Johannes Müller beigetragen</li>
+              </ul>
+            </aside>
+            <script src="feature-multilingual.js" type="module"></script>
+          </section>
+        </section>
 			</div>
 		</div>
 		<script>

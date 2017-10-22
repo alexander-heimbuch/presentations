@@ -20,6 +20,13 @@ html, body {
   font-family: 'Fira Sans', sans-serif;
 }
 
+.reveal h5 {
+  color: #2B8AC6;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 0.6em;
+  margin-top: 25px;
+}
+
 .reveal p {
   color: #2B8AC6;
   font-family: 'Fira Sans', sans-serif;
@@ -137,4 +144,38 @@ html, body {
 
 .responsive-info {
   font-size: 0.5em !important;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.5em !important;
+  margin-right: 15px !important;
+}
+
+.input input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 5px;
+  border: 2px solid #f2875c;
+  background: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+.input input[type="checkbox"]:checked {
+  background-color: #f2875c;
 }
