@@ -368,30 +368,76 @@
           <script src="feature-embedding.js" type="module"></script>
         </section>
 
-         <!-- Multilingual -->
-         <section class="centered" id="multilingual">
-            <h4>Mehrsprachen Support</h4>
-            <div id="player-multilingual" class="player"></div>
+        <!-- Multilingual -->
+        <section class="centered" id="multilingual">
+          <h4>Mehrsprachen Support</h4>
+          <div id="player-multilingual" class="player"></div>
 
-            <aside class="notes">
-              <ul>
-                <li>Von anfang an mit konzipiert, auch hier lokalisiert der player während der Laufzeit</li>
-                <li>Standardmäßig nimmt er die browser locale des nutzers an, das kann aber auch per Konfiguration veränder werden</li>
-                <li>Derzeit gibt es den Player auf Deutsch, Englisch sowie Spanisch</li>
-                <li>Lokalisierung ist relativ einfach, wir verwenden json files dazu, und wir sind über jede Zuarbeit immer dankbar, bspw. Spanisch wurde von Johannes Müller beigetragen</li>
-              </ul>
-            </aside>
-            <script src="feature-multilingual.js" type="module"></script>
-          </section>
+          <aside class="notes">
+            <ul>
+              <li>Von anfang an mit konzipiert, auch hier lokalisiert der player während der Laufzeit</li>
+              <li>Standardmäßig nimmt er die browser locale des nutzers an, das kann aber auch per Konfiguration veränder werden</li>
+              <li>Derzeit gibt es den Player auf Deutsch, Englisch sowie Spanisch</li>
+              <li>Lokalisierung ist relativ einfach, wir verwenden json files dazu, und wir sind über jede Zuarbeit immer dankbar, bspw. Spanisch wurde von Johannes Müller beigetragen</li>
+            </ul>
+          </aside>
+          <script src="feature-multilingual.js" type="module"></script>
         </section>
-			</div>
-		</div>
-		<script>
-			Reveal.initialize({
-        history: true,
-        width: '100%',
-        height: '100%'
-      });
-		</script>
-	</body>
+      </section>
+
+      <!-- Ausblick -->
+      <section id="ausblick">
+        <section id="ausblick-intro">
+          <h2>Ausblick</h2>
+          <h4><em>Transkripte, Live-Streaming & mehr</em></h4>
+          <aside class="notes">
+            <ul>
+              <li>Trotz mittlerweile mehr als 10 Monaten Entwicklungsarbeit haben wir noch einiges vor</li>
+              <li>Die Player Plattform bietet viel Platz für Erweiterungen</li>
+              <li>einige Features sind schon bereits durch die Design Phase, andere stecken noch im Urschleim</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section id="transkripte">
+          <h4>Transkripte</h4>
+          <aside class="notes">
+            <ul>
+              <li>Das feature was als nächstes auf der Roadmap steht</li>
+              <li>Podigee Player implementiert das feature bereits</li>
+              <li>Wir sind noch bei der Evaluation der richtigen Verwendung von verfügbaren Formaten</li>
+              <li>Zentraler Bestandteil ist die Zuordnung der Transkripte zur Zeitleiste, dabei wird auch der Ghost Mode wieder zur Anwendung kommen</li>
+              <li>Weiterhin werden Transkripte durchsuchbar sein, was einige neue Anwendungsfälle bei der Exploration des Podcasts schaffen wird</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section id="transkripte">
+          <h4>HLS Live Streaming</h4>
+          <ul>
+            <li>Konzept noch in Evaluation</li>
+            <li>Visualisierung Startzeit</li>
+            <li>Ankündigung Startzeit</li>
+            <li>Re-Live</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Von technischer Seite ist relativ klar wie die Implementierung aussehen wird</li>
+              <li>Konzeptionell noch in Erkundung</li>
+              <li>Darstellen wann der Live Stream startet, und dann automatisches starten</li>
+              <li>Visualisierung Buffering und ReLive</li>
+            </ul>
+          </aside>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script>
+    Reveal.initialize({
+      history: true,
+      width: '100%',
+      height: '100%'
+    });
+  </script>
+</body>
 </html
