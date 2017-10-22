@@ -3,7 +3,7 @@ import playerConfig from './fixtures/freakshow.js'
 const tree = window['d3-state-visualizer'].default.tree
 
 // Slide 2
-const playerTreeNode = document.getElementById('zustandsmaschine-tree')
+const playerTreeNode = document.getElementById('player-zustandsmaschine')
 const stateTreeNode = document.getElementById('zustandsmaschine-state-tree')
 
 const stateVisualizer = tree(stateTreeNode, {

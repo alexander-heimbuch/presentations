@@ -73,8 +73,7 @@ html, body {
   }
 }
 
-.reveal .slide-background {
-  opacity: 0.2 !important;
+.reveal .slide-background.moving-background {
   background-size: 110%;
   animation-name: animatedBackground;
   animation-duration: 150s;
@@ -84,6 +83,10 @@ html, body {
   -webkit-animation-duration: 150s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+}
+
+.reveal .slide-background.transparent-background {
+  opacity: 0.2 !important;
 }
 
 .reveal section img {

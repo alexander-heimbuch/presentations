@@ -12,13 +12,13 @@
 		<div class="reveal">
 			<div class="slides">
         <!-- KONZEPT -->
-        <section>
+        <section id="start">
           <img src="assets/logo.svg">
           <h2>Podlove Web Player v4</h2>
           <h4><em>Funktionen, Architektur und Ausblick</em></h4>
         </section>
 
-        <section>
+        <section id="uber-mich" data-background="assets/uber_mich_hintergrund.jpg" class="transparent-background">
           <h2>Über Mich</h2>
 
           <h4>Alexander Heimbuch</h4>
@@ -28,14 +28,13 @@
             <li>Fetisch für JavaScript Frameworks</li>
           </ul>
 
-
           <div><span style="display: inline-block; width: 150px;">Twitter:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://twitter.com/zusatzstoff">@zusatzstoff</a></div>
           <div><span style="display: inline-block; width: 150px;">Github:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://github.com/alexander-heimbuch">github.com/alexander-heimbuch</a></div>
         </section>
 
         <!-- Podcasts im Browser -->
-        <section>
-          <section>
+        <section id="podcasts-im-browser">
+          <section id="gretchenfrage">
             <h2>Podcasts im Browser</h2>
             <h4><em>Gretchenfrage</em></h4>
             <aside class="notes">
@@ -46,7 +45,8 @@
               </ul>
             </aside>
           </section>
-          <section>
+
+          <section id="nutzungsszenarien">
             <h3>Nutzungsszenarien</h3>
             <ul>
               <li>Mobil: langfristig und passiv</li>
@@ -60,7 +60,8 @@
               </ul>
             </aside>
           </section>
-          <section>
+
+          <section id="werkzeug">
             <h3>Webplayer als Werkzeug</h3>
             <ul>
               <li>Effiziente Exploration</li>
@@ -85,8 +86,8 @@
         </section>
 
         <!-- Konzept -->
-        <section data-background="assets/konzept_hintergrund.jpg">
-          <section>
+        <section data-background="assets/konzept_hintergrund.jpg" id="konzept" class="moving-background transparent-background">
+          <section id="konzept-intro">
             <h2>Konzept</h2>
             <h4><em>von Markus Stuhr</em></h4>
             <aside class="notes">
@@ -133,8 +134,8 @@
         </section>
 
         <!-- ZUSTANDSMASCHINE -->
-        <section>
-          <section>
+        <section id="architektur">
+          <section id="architektur-intro">
             <h2>Architektur</h2>
             <h4><em>Zustandsmaschine</em></h4>
             <aside class="notes">
@@ -145,8 +146,9 @@
               </ul>
             </aside>
           </section>
-          <section class="centered">
-            <div id="zustandsmaschine-tree" style="width: 500px;" class="player"></div>
+
+          <section class="centered" id="player-zustand">
+            <div id="player-zustandsmaschine" class="player"></div>
             <div id="zustandsmaschine-state-tree" class="background"></div>
             <aside class="notes">
               <ul>
@@ -158,7 +160,8 @@
               </ul>
             </aside>
           </section>
-          <section>
+
+          <section id="zustand-aktion-zustand">
             <div class="grid">
               <div class="box-centered" style="width: 30%">
                 <h3>Aktion</h3>
@@ -190,8 +193,8 @@
         </section>
 
         <!-- Features -->
-        <section>
-          <section>
+        <section id="features">
+          <section id="features-intro">
             <h2>Features</h2>
             <h4><em>Theming, Kapitel, Embedding & mehr</em></h4>
             <aside class="notes">
@@ -306,7 +309,24 @@
             <script src="feature-components.js" type="module"></script>
           </section>
 
-        <!-- Navigation -->
+        <!-- Orientierung -->
+        <section class="centered" id="orientierung">
+          <h4>Orientierung</h4>
+          <div id="player-orientierung" class="player"></div>
+          <aside class="notes">
+            <ul>
+              <li>Navigation ist ein besonderers wichtiger Teil des Players</li>
+              <li>Die zentrale Progress bar bietet zur Orientierung mehrere Indikatioren an</li>
+              <li>Kapitel sind durch Spearierungen erkennbar</li>
+              <li>Bereits geladene Bereiche werden durch Teiltransparenz angezeigt</li>
+              <li>Features die auch in anderen Playern bereits vorhanden sind</li>
+              <li>Besonders hier ist der Ghost Mode: Eine Funktion um bestimmte Teile der Zeitleiste zu erkunden</li>
+              <li>Ist auch in den Kapiteln verfügbar und ermöglicht gleichzeitig die Orientierung in der Gesamtspielzeit</li>
+              <li>Zuletzt werden in der Zeitleiste auch bereits gespielte Bereiche angezeigt</li>
+            </ul>
+          </aside>
+          <script src="feature-orientierung.js" type="module"></script>
+        </section>
 
         <!-- Sharing -->
         <section class="centered" id="sharing">
