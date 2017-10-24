@@ -183,13 +183,13 @@ html, body {
   background-color: #f2875c;
 }
 
-.team, .support {
+.team, .support, .compare {
   display: flex;
   width: 100%;
   flex-flow: row wrap;
 }
 
-.contributor {
+.contributor, .comparable {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,6 +197,19 @@ html, body {
   margin: 15px !important;
   color: white;
   width: calc(33% - 30px);
+}
+
+.title {
+  color: white !important;
+}
+
+.function {
+  color: #f2875c !important;
+  font-size: 0.7em !important;
+}
+
+.compare .comparable {
+  width: calc(50% - 30px);
 }
 
 .support .contributor {
@@ -222,4 +235,12 @@ html, body {
 .role {
   color: #f2875c !important;
   font-size: 0.5em !important;
+}
+
+.reveal .slides section .fragment.current-visible.current-fragment {
+  display: block;
+}
+
+.reveal .slides section .fragment.current-visible {
+  display: none;
 }

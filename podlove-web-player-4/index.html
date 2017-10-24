@@ -39,24 +39,45 @@
             <h4><em>Gretchenfrage</em></h4>
             <aside class="notes">
               <ul>
-                <li>Bevor wir auf den Player zu sprechen kommen würde ich gerne erstmal einen Schritt zurück treten und einen Blick auf die Nutzungsrealität von Podcasts werfen</li>
+                <li>Bevor wir auf den Player zu sprechen kommen würde erstmal einen Schritt zurück treten</li>
+                <li>Blick auf die Nutzungsrealitäten von Podcasts werfen</li>
                 <li>Wie wahrscheinlich alle von euch konsumiere ich keine Podcasts im Browser sondern mobil in einem Podcast Client</li>
-                <li>Warum benötigen wir also eigentlich einen Player im Browser?</li>
+                <li>Warum benötigen wir also eigentlich einen Player im Browser? Warum also Zeit investieren?</li>
               </ul>
             </aside>
           </section>
 
           <section id="nutzungsszenarien">
             <h3>Nutzungsszenarien</h3>
-            <ul>
-              <li>Mobil: langfristig und passiv</li>
-              <li>Browser: kurzfristig und explorativ</li>
-            </ul>
+            <div class="compare">
+              <div class="comparable fragment">
+                <div class="title">Mobil</div>
+                <div class="function">langfristig und passiv</div>
+              </div>
+              <div class="comparable fragment">
+                <div class="title">Browser</div>
+                <div class="function">kurzfristig und explorativ</div>
+              </div>
+            </div>
+
             <aside class="notes">
               <ul>
-                <li>Uns muss klar sein das das Konsumieren von Podcasts im Browser und im Podcast Client an sich zwei komplett andere Nutzungsszenarien sind</li>
-                <li>Nutzer im Mobilen Podcast Client eher einen langfristigen und passiven Konsum: Ziel Abbonierte Podcasts hören</li>
-                <li>Im Browser explorativer und kurzfristiger Konsum: Ziel Neue Podcasts entdecken</li>
+                <li>Konsumieren von Podcasts im Browser und im Podcast Client zwei komplett andere Nutzungsszenarien</li>
+                <li>Nutzer im Mobilen Podcast Client:
+                  <ul>
+                    <li>Motivation: überwiegend bereits abbonierte Podcasts hören</li>
+                    <li>Konsum: langfristig meist passiv neben einer anderen Tätigkeit</li>
+                    <li>Grund: Podcast Clients bieten nur eingeschränkten Einblick in den Kontext von Podcasts</li>
+                  </ul>
+                </li>
+                <li>Nutzer im Browser:
+                  <ul>
+                    <li>Motivation: Anhören von neuen Podcasts, exploration eines Podcasts</li>
+                    <li>Konsum: kurzfristig bis zur Entscheidung ob Podcast abboniert werden soll</li>
+                    <li>Grund: Browser nur eingeschränkt nutzbar für den parallelen Komsum</li>
+                  </ul>
+                </li>
+                <li>Ausnahmen: Podcast Directories</li>
               </ul>
             </aside>
           </section>
@@ -72,14 +93,37 @@
             </ul>
             <aside class="notes">
               <ul>
-                <li>Euer Ziel als Podcaster ist es neue Hörer schnell zu gewinnen</li>
-                <li>Das Ziel des Webplayers sollte es sein den Nutzer einen schnellen Einblick in eine Episode zu geben: der interaktive Subscribe button</li>
-                <li>Das Web bietet uns die Möglichkeit einfach Inhalte zu teilen und mit eindeutigen Referenzen zu versehen</li>
-                <li>Der Player muss also in der Lage sein euere Podcasts bestmöglich zu verbreiten</li>
-                <li>Weiterhin gibt es Anwendungsfälle die im Kontext von Podcast Websites viel Sinn machen ein prominentes Beispiel sind Livestreams</li>
-                <li>Zuletzt geben uns die offenen Standards und niedrigen Einstiegsbarrieren des Webs Möglichkeiten Nutzergruppen zu unterstützen die für kommerzielle Anwendungen oft leider kaum eine Rolle spielen, bspw. Menschen mit Sehbehinderung</li>
-                <li>Der Player ist also auch als Plattform für Enablement zu verstehen</li>
-                <li>Zu guter letzt verwenden wir den Player auch als Techdemo um implementieren Eindrücke über die Zukunft von Podcasts aus sicht von Podlove zu geben</li>
+                <li>Webplayer weniger als Mittel zum dauerhaften hören, sondern als Werkzeug</li>
+                <li>Ziel Podcaster: Abbonennten gewinnen
+                  <ul>
+                    <li>Player muss Nutzer schnellen Einblick/Orientierung im Podcast geben</li>
+                    <li>Werkzeug: Player als interaktiver Subscribe Button</li>
+                  </ul>
+                </li>
+                <li>Ziel: Teilen von Episoden in andere Medien
+                  <ul>
+                    <li>Episoden müssen einfach teilbar sein</li>
+                    <li>Werkzeug: Player als eindeutig teilbare Refenz zur Episode mit Möglichkeit des Embeddens</li>
+                  </ul>
+                </li>
+                <li>Ziel: Anbieten von Live Streams
+                  <ul>
+                    <li>Player muss eine Möglichkeit bieten den Livestream in die Podcast Webseite einzubinden</li>
+                    <li>Werkzeug: Player als Plattform Client mit interaktiven Elementen für die Community</li>
+                  </ul>
+                </li>
+                <li>Ziel: Enablement von neuen Nutzergruppen
+                  <ul>
+                    <li>Player hat das Potenzial Nutzergruppen zu unterstützen die nicht interessant für kommerzielle Anwendungen interessant sind</li>
+                    <li>Werkzeug: Player muss Barrierefrei sein und besondere Bedürfnisse berücksichtigen</li>
+                    <li>bspw. Menschen mit Seh- oder Höreinschränkung</li>
+                  </ul>
+                </li>
+                <li>Ziel: Weitertreiben des Mediums Podcasts
+                  <ul>
+                    <li>Techdemo um anderen Implementierern einene Einblick in die Zukunft von Podcasts aus sicht von Podlove zu geben</li>
+                  </ul>
+                </li>
               </ul>
             </aside>
           </section>
@@ -353,7 +397,7 @@
         <!-- Embedding -->
         <section class="centered" id="embedding">
           <h4>Embedding</h4>
-          <div id="player-embedding" class="player fragment" style="margin-bottom: 15px;"></div>
+          <div id="player-embedding" class="player fragment current-visible" style="margin-bottom: 15px;"></div>
           <iframe class="fragment" width="768" height="290" src="https://forschergeist.de/wp-content/plugins/podlove-podcasting-plugin-for-wordpress/lib/modules/podlove_web_player/player_v4/dist/share.html?episode=https://forschergeist.de/?podlove_player4=164" frameborder="0" scrolling="no"></iframe>
 
           <aside class="notes">
@@ -469,22 +513,22 @@
             <a class="contributor" href="https://github.com/eteubert">
               <span style="background-image: url('https://avatars0.githubusercontent.com/u/235918?s=460&v=4')" class="avatar"></span>
               <span class="name">Eric Teubert</span>
-              <span class="role">Support</span>
+              <span class="role">Publisher Integration</span>
             </a>
             <a class="contributor" href="https://github.com/McCouman">
               <span style="background-image: url('https://avatars1.githubusercontent.com/u/3239082?s=460&v=4')" class="avatar"></span>
               <span class="name">Michael McCouman Jr.</span>
-              <span class="role">Support</span>
+              <span class="role">Testing & Assets</span>
             </a>
             <a class="contributor" href="https://twitter.com/twittlik">
               <span style="background-image: url('https://ca.slack-edge.com/T02B42T7A-U55EB5NN8-6ec0223e6d28-1024')" class="avatar"></span>
               <span class="name">Malik Aziz</span>
-              <span class="role">Support</span>
+              <span class="role">Konzepte & Design</span>
             </a>
             <a class="contributor" href="https://github.com/plutonik-a">
               <span style="background-image: url('https://avatars1.githubusercontent.com/u/1157669?s=460&v=4')" class="avatar"></span>
               <span class="name">Alexandra von Criegern</span>
-              <span class="role">Support</span>
+              <span class="role">Testing</span>
             </a>
           </div>
         </section>
@@ -496,6 +540,10 @@
       history: true,
       width: '100%',
       height: '100%'
+    });
+
+    Reveal.addEventListener('fragmenthide', () => {
+      window.dispatchEvent(new Event('resize'))
     });
   </script>
 </body>
