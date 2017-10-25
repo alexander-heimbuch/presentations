@@ -136,10 +136,14 @@
             <h4><em>von Markus Stuhr</em></h4>
             <aside class="notes">
               <ul>
-                <li>Das Konzept wurde ende 2016 von Markus Stuhr in Kooperation mit Tim entwickelt</li>
-                <li>Es zeichnet sich durch eine Vielzahl an Varianten für theming sowie embedding aus</li>
-                <li>Bildet das basis theming ab</li>
-                <li>Definiert Breakpoints für Responsivität und Verhalten beim Embedding</li>
+                <li>Konzept ende 2016 von Markus Stuhr in Kooperation mit Tim entwickelt</li>
+                <li>Bildet Vielzahl an Varianten des Players:
+                  <ul>
+                    <li>Basiskonzept Zweifarben Theming</li>
+                    <li>Definition von Breakpoints für Responsivität und Verhalten von UI elementen in bestimmten Auflösungen</li>
+                    <li>Verhalten des Players für das Embedding</li>
+                  </ul>
+                </li>
               </ul>
             </aside>
           </section>
@@ -156,7 +160,7 @@
               </div>
               <div class="player-konzept-teil" id="player-konzept-track">
                 <img src="assets/konzept_player_track.png">
-                <span class="beschreibung">Track Controls</span>
+                <span class="beschreibung">Progressbar</span>
               </div>
               <div class="player-konzept-teil" id="player-konzept-tabs">
                 <img src="assets/konzept_player_tabs.png">
@@ -165,12 +169,17 @@
             </div>
             <aside class="notes">
               <ul>
-                <li>Der Player verfolgt ein sehr einfaches und klares Grundkonzept</li>
-                <li>Eine klare separierung von Funktion und Information soll es dem Nutzer ermöglichen Bedienkonzepte besser zu verstehen</li>
-                <li>Zu aller erst wird eine kurze Beschreibung der Episode visualisiert</li>
-                <li>Direkt darunter sind die zentralen Player controls zum starten/stoppen sowie zur Navigation in Kapiteln und zum vor/zurück spulen</li>
-                <li>Die Zeitleiste ist das zentrale Element zur Navigation im Podcast und hat im Konzept eine besondere Stellung und Features</li>
-                <li>Alle weiteren Funktionen werden in Tabs organisiert, bspw. Kapitel, Audio Controls oder Informationen zum Podcast</li>
+                <li>Sehr einfaches und klares Grundkonzept</li>
+                <li>Klare Separierung von Funktion und Information</li>
+                <li>Nutzer ermöglichen Bedienkonzepte klar zu verstehen</li>
+                <li>Folgende Grundelemente:
+                  <ul>
+                    <li>Kurze Beschreibung der Episode</li>
+                    <li>Zentralen Controls zum starten/stoppen, Kapitel Navigation und zum vor/zurück spulen</li>
+                    <li>Progressbar als besondere Stellung: zentrale Element zur Orientierung im Podcast</li>
+                    <li>Tabs: alle weiteren Funktionen, bspw. Kapitel, Audio Controls oder Informationen zum Podcast</li>
+                  </ul>
+                </li>
               </ul>
             </aside>
           </section>
@@ -184,9 +193,11 @@
             <h4><em>Zustandsmaschine</em></h4>
             <aside class="notes">
               <ul>
-                <li>Um eine robuste Plattform für den Player und auch die zukünftige Erweiterungen und logik abzubilden sehr viel Zeit in das Thema investiert</li>
-                <li>Die Abbildung des Zustandes der UI ist eine kern Herausforderung bei dessen Entwicklung</li>
-                <li>Ein großteil der Bugs die in euren täglichen Leben euch begegnen resultieren aus inkonsistenten Zuständen oder Zustandsübergängen von Applikationen</li>
+                <li>Robuste Plattform für den Player</li>
+                <li>Basis für saubere Abbildung der Player Logik und zukünftige Erweiterungen</li>
+                <li>Hier nur kurz vorstellen wie Zustand verwaltet wird, Details hierzu gibt es im Workshop</li>
+                <li>Abbildung des Zustandes der UI ist mit die größte Herausforderung bei Architektur</li>
+                <li>Großteil der Bugs die in täglichen Leben resultieren aus inkonsistenten Zuständen oder Zustandsübergängen</li>
               </ul>
             </aside>
           </section>
@@ -196,11 +207,22 @@
             <div id="zustandsmaschine-state-tree" class="background"></div>
             <aside class="notes">
               <ul>
-                <li>Um diesen Zustand deterministisch abbilden zu können halten wir sämtlichen UI Zustand an einer zentralen Stelle</li>
-                <li>Übrigens Unterschätzt leicht wieviel komplexität ein Player beinhaltet (klick auf play)</li>
-                <li>Informationen wie Spielzeit, Dauer, Kapitelmarken, os context, farbthemes, usw.</li>
-                <li>Der Player ist so konstruiert das er bei einem gegebenen Zustand immer die exakte visuelle Repräsentation dieses Zustandes annimmt</li>
-                <li>Das hat massive Vorteile für die Architektur des Players und ermölgicht eine hohe Fehlertolleranz, entkoppelte Erweiterbarkeit sowie </li>
+                <li>Im besten Fall Zustand deterministisch</li>
+                <li>Sämtlicher UI Zustand wird an einer zentralen Stelle in einem Objekt gehalten</li>
+                <li>Unterschätzt leicht komplexität des Zustandes eines Players:
+                  <ul>
+                    <li>Spielzeit, Dauer, Kapitelmarken, Laufzeit, Farbthemes usw.</li>
+                  </ul>
+                </li>
+                <li>UI des Players ist eine exakte visuelle Repräsentation dieses Zustandes</li>
+                <li>Ändert sich der Zustand, ändert sich die UI</li>
+                <li>Dadurch Trennung von Visualisierung und Zustand</li>
+                <li>Massive Vorteile für die Architektur des Players:
+                  <ul>
+                    <li>Entkoppelte Komponenten: View Renderer, Audio Backend, usw.</li>
+                    <li>Erhöhte Fehlertolleranz</li>
+                  </ul>
+                </li>
               </ul>
             </aside>
           </section>
