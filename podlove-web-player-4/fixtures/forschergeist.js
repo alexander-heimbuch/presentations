@@ -8,7 +8,9 @@ export default {
   },
   reference: {
     share: 'node_modules/@podlove/podlove-web-player/dist',
-    base: 'node_modules/@podlove/podlove-web-player/dist'
+    base: 'node_modules/@podlove/podlove-web-player/dist',
+    share: 'https://forschergeist.de/wp-content/plugins/podlove-podcasting-plugin-for-wordpress/lib/modules/podlove_web_player/player_v4/dist/share.html',
+    config: 'https://forschergeist.de/?podlove_player4=164'
   },
   theme: { main: '#12584b', highlight: '#000' },
   title: 'FG049 Open Educational Resources',

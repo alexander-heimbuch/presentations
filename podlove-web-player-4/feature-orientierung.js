@@ -20,8 +20,14 @@ window.podlovePlayer(playerNode, fokusEuropa).then(store => {
   store.dispatch({
     type: 'LOAD_QUANTILES',
     payload: [
-      [0, 1000]
+      [0, 1000],
+      [1500, 2000]
     ]
+  })
+
+  store.dispatch({
+    type: 'UPDATE_PLAYTIME',
+    payload: 2000
   })
 
   setTimeout(() => window.dispatchEvent(new Event('resize')), 500)

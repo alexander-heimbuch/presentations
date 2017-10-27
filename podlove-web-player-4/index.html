@@ -67,14 +67,12 @@
                   <ul>
                     <li>Motivation: überwiegend bereits abbonierte Podcasts hören</li>
                     <li>Konsum: langfristig meist passiv neben einer anderen Tätigkeit</li>
-                    <li>Grund: Podcast Clients bieten nur eingeschränkten Einblick in den Kontext von Podcasts</li>
                   </ul>
                 </li>
                 <li>Nutzer im Browser:
                   <ul>
                     <li>Motivation: Anhören von neuen Podcasts, exploration eines Podcasts</li>
                     <li>Konsum: kurzfristig bis zur Entscheidung ob Podcast abboniert werden soll</li>
-                    <li>Grund: Browser nur eingeschränkt nutzbar für den parallelen Komsum</li>
                   </ul>
                 </li>
                 <li>Ausnahmen: Podcast Directories</li>
@@ -483,7 +481,6 @@
           <h4>HLS Live Streaming</h4>
           <ul>
             <li>Konzept noch in Evaluation</li>
-            <li>Visualisierung Startzeit</li>
             <li>Ankündigung Startzeit</li>
             <li>Re-Live</li>
           </ul>
@@ -525,10 +522,11 @@
             <a class="contributor" href="https://github.com/timpritlove">
               <span style="background-image: url('https://avatars3.githubusercontent.com/u/119680?s=460&v=4')" class="avatar"></span>
               <span class="name">Tim Pritlove</span>
-              <span class="role">Devil's Advocate</span>
+              <span class="role">Konzept</span>
             </a>
           </div>
         </section>
+
         <section id="support">
           <h2>Support</h2>
           <div class="support">
@@ -555,6 +553,15 @@
           </div>
         </section>
       </section>
+
+      <section id="qa">
+        <h1>Q & A</h1>
+        <h4>Dokumentation</h4>
+        <h5><a href="http://docs.podlove.org/podlove-web-player/">docs.podlove.org/podlove-web-player</a></h5>
+        <br />
+        <h4>Präsentation</h4>
+        <h5><a href="http://alexander.heimbu.ch/presentations/podlove-web-player-4">alexander.heimbu.ch/presentations/podlove-web-player-4</a></h5>
+      </section>
     </div>
   </div>
   <script>
@@ -567,6 +574,8 @@
     Reveal.addEventListener('fragmenthide', () => {
       window.dispatchEvent(new Event('resize'))
     });
+
+    localStorage.clear();
   </script>
 </body>
 </html
