@@ -28,8 +28,12 @@
             <li>Fetisch für JavaScript Frameworks</li>
           </ul>
 
-          <div><span style="display: inline-block; width: 150px;">Twitter:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://twitter.com/zusatzstoff">@zusatzstoff</a></div>
-          <div><span style="display: inline-block; width: 150px;">Github:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://github.com/alexander-heimbuch">github.com/alexander-heimbuch</a></div>
+          <div>
+            <span style="display: inline-block; width: 150px;">Twitter:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://twitter.com/zusatzstoff">@zusatzstoff</a>
+          </div>
+          <div>
+            <span style="display: inline-block; width: 150px;">Github:</span> <a style="display: inline-block; width: 650px; text-align: left;" href="https://github.com/alexander-heimbuch">github.com/alexander-heimbuch</a>
+          </div>
         </section>
 
         <!-- Podcasts im Browser -->
@@ -39,7 +43,7 @@
             <h4><em>Gretchenfrage</em></h4>
             <aside class="notes">
               <ul>
-                <li>Bevor wir auf den Player zu sprechen kommen würde erstmal einen Schritt zurück treten</li>
+                <li>Bevor wir auf den Player zu sprechen kommen erstmal einen Schritt zurück treten</li>
                 <li>Blick auf die Nutzungsrealitäten von Podcasts werfen</li>
                 <li>Wie wahrscheinlich alle von euch konsumiere ich keine Podcasts im Browser sondern mobil in einem Podcast Client</li>
                 <li>Warum benötigen wir also eigentlich einen Player im Browser? Warum also Zeit investieren?</li>
@@ -75,7 +79,6 @@
                     <li>Konsum: kurzfristig bis zur Entscheidung ob Podcast abboniert werden soll</li>
                   </ul>
                 </li>
-                <li>Ausnahmen: Podcast Directories</li>
               </ul>
             </aside>
           </section>
@@ -95,25 +98,25 @@
                 <li>Ziel Podcaster: Abbonennten gewinnen
                   <ul>
                     <li>Player muss Nutzer schnellen Einblick/Orientierung im Podcast geben</li>
-                    <li>Werkzeug: Player als interaktiver Subscribe Button</li>
+                    <li>Player als interaktiver Subscribe Button</li>
                   </ul>
                 </li>
                 <li>Ziel: Teilen von Episoden in andere Medien
                   <ul>
                     <li>Episoden müssen einfach teilbar sein</li>
-                    <li>Werkzeug: Player als eindeutig teilbare Refenz zur Episode mit Möglichkeit des Embeddens</li>
+                    <li>Player als eindeutig teilbare Refenz zur Episode mit Möglichkeit des Embeddens</li>
                   </ul>
                 </li>
                 <li>Ziel: Anbieten von Live Streams
                   <ul>
                     <li>Player muss eine Möglichkeit bieten den Livestream in die Podcast Webseite einzubinden</li>
-                    <li>Werkzeug: Player als Plattform Client mit interaktiven Elementen für die Community</li>
+                    <li>Player als Plattform Client mit interaktiven Elementen für die Community</li>
                   </ul>
                 </li>
                 <li>Ziel: Enablement von neuen Nutzergruppen
                   <ul>
                     <li>Player hat das Potenzial Nutzergruppen zu unterstützen die nicht interessant für kommerzielle Anwendungen interessant sind</li>
-                    <li>Werkzeug: Player muss Barrierefrei sein und besondere Bedürfnisse berücksichtigen</li>
+                    <li>Player muss Barrierefrei sein und besondere Bedürfnisse berücksichtigen</li>
                     <li>bspw. Menschen mit Seh- oder Höreinschränkung</li>
                   </ul>
                 </li>
@@ -263,9 +266,10 @@
             <h4><em>Theming, Kapitel, Embedding & mehr</em></h4>
             <aside class="notes">
               <ul>
-                <li>Nach der vielen Theorie freue ich mich euch jetzt die features des Players präsentieren zu können</li>
-                <li>Alle beispiele die ihr jetzt sehen werdet sind ohne anpassungen am eigentlichen Player code möglich</li>
-                <li>Die meisten von euch werden den Publisher für die Integration wahrscheinlich verwenden, wenn ihr allerdings den Player selber in eure Webseite integrieren und erweitern wollt lade ich euch herzlich zum passenden Workshop mrogen ein</li>
+                <li>Nach der vielen Theorie jetzt features des Players präsentieren</li>
+                <li>Alle beispiele sind ohne anpassungen am eigentlichen Player code möglich</li>
+                <li>Großteil wird publisher verwenden um player einzubinden</li>
+                <li>Für alle anderen gibt es morgen einen Workshop zum selbstständigen integrieren und erweitern</li>
               </ul>
             </aside>
           </section>
@@ -422,8 +426,10 @@
 
           <aside class="notes">
             <ul>
-              <li>Embedding ist ebenso lokalisiert unter sharing</li>
-              <li>Da embedding immer einer referenz auf eine episode darstellt ist es entsprechend nicht für die show verfügbar</li>
+              <li>Embedding ist ebenso in sharing zu finden</li>
+              <li>Embedding immer Referenz auf eine konkrete Episode</li>
+              <li>Ist entsprechend nicht für die Show verfügbar</li>
+              <li>Wird ein iframe zum embedden verwendet</li>
               <li>Wir verwenden einen iframe zum embedden, das macht es relativ einfach die episdoe zu teilen bedeutet für uns aber auch technische Einschränkungen</li>
               <li>So ist es nicht möglich die Höhe von iframes ohne externes javascript anzupassen</li>
               <li>Das zwingt uns größen in eienr fixierten Ratio anzubieten, deshalb funktionieren die tabs anders als im nativen player</li>
