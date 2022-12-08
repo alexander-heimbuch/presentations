@@ -8,7 +8,7 @@
     "start": "reveal-md slides.md --theme moon"
   },
   "dependencies": {
-    "reveal-md": "5.0.0"
+    "reveal-md": "5.4.0"
   },
   "keywords": [],
   "author": "",
