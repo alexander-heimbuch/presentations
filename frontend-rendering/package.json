@@ -1,0 +1,25 @@
+{
+  "name": "frontend-rendering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "vanilla:start": "cd examples/vanilla && npm start",
+    "vanilla:install": "cd examples/vanilla && npm install",
+    "react:start": "cd examples/react && npm start",
+    "react:install": "cd examples/react && npm install",
+    "svelte:install": "cd examples/svelte && npm install",
+    "svelte:start": "cd examples/svelte && npm start",
+    "examples": "run-p *:start",
+    "presentation": "reveal-md slides.md --theme moon --css style.css",
+    "start": "run-p examples presentation",
+    "postinstall": "run-p *:install"
+  },
+  "dependencies": {
+    "reveal-md": "6.1.1",
+    "npm-run-all": "4.1.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
