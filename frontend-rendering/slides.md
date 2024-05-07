@@ -138,7 +138,7 @@ import Headline from './Headline';
 import Input from './Input';
 import Button from './Button';
 
-function App({ title }) {
+function Component({ title }) {
   let currentTitle = title;
   let inputValue = title;
 
@@ -148,7 +148,7 @@ function App({ title }) {
     inputValue = '';
   }
 
-  return <div class="app">
+  return <div class="component">
     <Headline title={ currentTitle } /> 
     <Input value={ inputValue } onChange={ updateValue } />
     <Button onCLick={ reset }>Reset</Button>
@@ -167,8 +167,12 @@ Note:
 ### Component Usage
 
 ```jsx
-<App title="A Simple Example" />
+<Component title="A Simple Example" />
 ```
+
+Note:
+- Lets have a look at the building blocks of a component
+- Most Component Frameworks define the same building blocks
 
 ----
 
@@ -219,7 +223,7 @@ Notes:
 
 ----
 
-### State
+### Reactivity
 
 ```jsx
 
@@ -237,8 +241,8 @@ function App({ title }) {
 
 Note:
 - The Component needs to be somehow updated once the component state changes
-- Most Component Frameworks define the same building blocks
-- The difference is mostly in how they will establish reactivity
+- Very different how component frameworks will establish reactivity
+
 
 ---
 
